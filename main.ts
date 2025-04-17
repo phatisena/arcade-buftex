@@ -2,10 +2,9 @@
 //% color="#7C9BDE" icon="\uf187"
 namespace buftex {
 
-    function bitcalc(nv: number,bl: number,ib: boolean = false ) {
+    function bitcalc(nv: number,bl: number ) {
         const bsum = bl ** 2 * 4, isum = Math.ceil(Math.log(nv) / Math.log(bsum))
-        if (ib) return isum
-        return bsum ** isum
+        return isum
     }
 
     /**
@@ -21,7 +20,7 @@ namespace buftex {
         let numarrv: number[] = []
         for (let i = 0;i < txtv.length;i++) {
             let numv = txtv.charCodeAt(i)
-            let bytelen = bitcalc(numv,8,true), bytemax = 8 ** 2 * 4
+            let bytelen = bitcalc(numv,8), bytemax = 8 ** 2 * 4
             numarrv.push(bytelen)
             for (let j = 0;j < bytelen;j++) {
                 numarrv.push(numv % bytemax)
@@ -60,4 +59,5 @@ namespace buftex {
         }
         return strtxt
     }
+    
 }
