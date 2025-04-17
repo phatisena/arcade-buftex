@@ -1,5 +1,6 @@
 {
     "name": "arcade-buftex",
+    "version": "0.0.1",
     "description": "buffer text encoder for makecode arcade",
     "dependencies": {
         "device": "*"
