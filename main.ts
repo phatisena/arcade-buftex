@@ -33,6 +33,7 @@ namespace buftex {
      */
     //% blockid=buftex_decode
     //% block="get $bufv convert to string"
+    //% bufv.shadow=variables_get bufv.defl=buffer
     //% group="main"
     //% weight=5
     export function decode(bufv: Buffer) {
